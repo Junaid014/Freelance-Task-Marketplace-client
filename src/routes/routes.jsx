@@ -7,6 +7,7 @@ import Home from "../Pages/Home";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
+import AddTask from "../Pages/AddTask";
 export const router = createBrowserRouter([
   {
     
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
 
         }
     ]
+  },
+  {
+    path:"/addtask",
+    Component:AddTask
   },
   {
       path:"/auth",

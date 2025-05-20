@@ -44,14 +44,14 @@ const Navbar = () => {
 
       <li className="mr-2 text-sm font-semibold">
         <NavLink
-          to="/profile"
+          to="/addtask"
           className={({ isActive }) =>
             isActive
               ? 'text-[#3B82F6] underline'
               : 'text-[#1E293B] hover:text-[#2563EB] hover:underline'
           }
         >
-          Profile
+          AddTask
         </NavLink>
       </li>
     </div>

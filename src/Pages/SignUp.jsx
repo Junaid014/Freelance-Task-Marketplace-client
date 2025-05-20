@@ -80,7 +80,8 @@ const SignUp = () => {
   }
     return (
         <div className='bg-[#e2edff] min-h-screen pt-9 md:pt-1 md:flex  items-center'>
-             <DotLottieReact className='md:flex hidden'
+             <DotLottieReact className='w-full md:flex hidden'
+             
       src="https://lottie.host/c998d45f-036d-447b-be4a-6ebbe444b57e/MWx9J7Dngy.lottie"
       loop
       autoplay
