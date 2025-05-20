@@ -11,7 +11,7 @@ const [show, setShow] = useState(false);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setShow(true), index * 400); 
+          setTimeout(() => setShow(true), index * 300); 
           observer.disconnect(); 
         }
       },

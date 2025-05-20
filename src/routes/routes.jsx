@@ -10,6 +10,8 @@ import SignUp from "../Pages/SignUp";
 import AddTask from "../Pages/AddTask";
 import JobsDetails from "../Components/JobsDetails";
 import BrowseTask from "../Pages/BrowseTask";
+import MyPostedJobs from "../Pages/MyPostedJobs";
+import PrivetRoute from "../Provider/PrivetRoute";
 export const router = createBrowserRouter([
   {
 
@@ -33,6 +35,12 @@ export const router = createBrowserRouter([
       {
         path: "addtask",
         Component: AddTask
+      },
+      {
+        path: "mycart",
+        element: <PrivetRoute>
+          <MyPostedJobs></MyPostedJobs>
+        </PrivetRoute>
       },
       {
         path:"jobs/:id",
