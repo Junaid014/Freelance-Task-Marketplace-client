@@ -15,6 +15,7 @@ const AddTask = () => {
 
         const taskData = {
             title: form.title.value,
+            photo: form.photo.value,
             category: form.category.value,
             description: form.description.value,
             deadline: deadline?.toISOString().split("T")[0],
