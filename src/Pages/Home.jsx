@@ -11,10 +11,11 @@ const Home = () => {
 
             <div className='grid grid-cols-3'>
                 {
-                    jobs.map(job=>
+                    jobs.map((job,index)=>
                     <JobsCard 
                     key={job._id}
                     job={job}
+                    index={index}
                     ></JobsCard>)
                 }
             </div>
