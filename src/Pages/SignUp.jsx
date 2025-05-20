@@ -79,14 +79,14 @@ const SignUp = () => {
   })
   }
     return (
-        <div className='bg-[#e2edff] min-h-screen flex justify-between items-center'>
-             <DotLottieReact
+        <div className='bg-[#e2edff] min-h-screen pt-9 md:pt-1 md:flex  items-center'>
+             <DotLottieReact className='md:flex hidden'
       src="https://lottie.host/c998d45f-036d-447b-be4a-6ebbe444b57e/MWx9J7Dngy.lottie"
       loop
       autoplay
     />
 
-          <div className='lg:mr-[340px]'>
+          <div className='md:mr-[360px]'>
       <div className='flex justify-center mt-4 items-center'>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl pt-6  px-2">
           <h2 className='text-3xl font-semibold text-center'>Register your Account</h2>
@@ -133,7 +133,7 @@ const SignUp = () => {
               <button type='submit' className="btn btn-neutral font-bold mt-4 bg-[#1976d2] border-none">SignUp</button>
             </form>
             <p className=' font-semibold text-center py-3'>
-              Already Have An Account? <Link to="/auth/login" className='text-[#4d5efe]'>Login</Link>
+              Already Have An Account? <Link to="/auth/login" className='text-[#60A5FA]'>Login</Link>
             </p>
           </div>
         </div>
