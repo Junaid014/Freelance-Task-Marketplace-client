@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import AddTask from "../Pages/AddTask";
 import JobsDetails from "../Components/JobsDetails";
+import BrowseTask from "../Pages/BrowseTask";
 export const router = createBrowserRouter([
   {
 
@@ -20,6 +21,13 @@ export const router = createBrowserRouter([
         path: "/",
         loader:()=>fetch('http://localhost:3000/jobs/recent'),
         Component: Home
+
+      },
+      {
+        
+        path: "/browsejobs",
+        loader:()=>fetch('http://localhost:3000/jobs'),
+        Component: BrowseTask
 
       },
       {

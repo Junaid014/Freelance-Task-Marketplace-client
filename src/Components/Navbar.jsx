@@ -54,6 +54,18 @@ const Navbar = () => {
           AddTask
         </NavLink>
       </li>
+      <li className="mr-2 text-sm font-semibold">
+        <NavLink
+          to="/browsejobs"
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#3B82F6] underline'
+              : 'text-[#1E293B] hover:text-[#2563EB] hover:underline'
+          }
+        >
+          BrowseTask
+        </NavLink>
+      </li>
     </div>
   );
 
@@ -102,7 +114,8 @@ const Navbar = () => {
             </NavLink>
 
             <button
-              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] text-white rounded-lg font-medium shadow-md hover:from-[#2563EB] hover:to-[#3B82F6] transition duration-300"
+              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#00a7ac] to-[#00cfc3] text-white rounded-lg font-medium shadow-md hover:from-[#008f92] hover:to-[#00b5a9]
+ transition duration-300"
               onClick={handleSignOut}
             >
               SignOut
@@ -112,14 +125,16 @@ const Navbar = () => {
           <div className="navbar-end flex gap-3">
             <Link
               to="/auth/login"
-              className="px-4 cursor-pointer font-medium py-2 border border-[#3B82F6] text-[#3B82F6] hover:bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] hover:text-white rounded-md transition"
+              className="px-4 cursor-pointer font-medium py-2 border border-[#00a7ac] text-[#00a7ac]   duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#00a7ac] hover:to-[#00cfc2] hover:text-white
+ rounded-md transition"
             >
               Login
             </Link>
 
             <Link
               to="/auth/signUp"
-              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] text-white rounded-lg font-medium shadow-md hover:from-[#2563EB] hover:to-[#3B82F6] transition duration-300"
+              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#00a7ac] to-[#00cfc3] text-white rounded-lg font-medium shadow-md hover:from-[#008f92] hover:to-[#00b5a9]
+transition duration-300"
             >
               Sign Up
             </Link>

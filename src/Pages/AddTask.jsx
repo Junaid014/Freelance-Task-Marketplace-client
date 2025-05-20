@@ -25,9 +25,9 @@ const AddTask = () => {
         };
 
         console.log(taskData);
-        
+
         // send jobs to database
-         fetch('http://localhost:3000/jobs', {
+        fetch('http://localhost:3000/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -84,9 +84,15 @@ const AddTask = () => {
                                 >
                                     <option value="">Select Category</option>
                                     <option value="Web Development">Web Development</option>
-                                    <option value="Design">Design</option>
-                                    <option value="Writing">Writing</option>
-                                    <option value="Marketing">Marketing</option>
+                                    <option value="App Development">App Development</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Content Creation">Content Creation</option>
+                                    <option value="Social Media Management">Social Media Management</option>
+                                    <option value="Video Editing">Video Editing</option>
+                                    <option value="Photography">Photography</option>
+                                    <option value="Branding">Branding</option>
+                                    <option value="Data Analysis">Data Analysis</option>
                                 </select>
                             </div>
                         </div>
@@ -165,34 +171,34 @@ const AddTask = () => {
 
 
                         {/* Description */}
-                        <div className="md:flex  mb-8">   
-                        <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text text-gray-900 font-medium">Description</span>
-                            </label>
-                            <textarea
-                                name="description"
-                                placeholder="What needs to be done?"
-                                required
-                                className="w-full h-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
-                            ></textarea>
-                        </div>
-
-                         <div className="form-control md:ml-4 md:w-1/2">
-                            <label className="label">
-                                <span className="label-text text-gray-900 font-medium">Photo URL</span>
-                            </label>
-                            <label className="input-group">
-                                <input
-                                    type="text"
-                                    name="photo"
-                                    placeholder="Photo URL"
+                        <div className="md:flex  mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text text-gray-900 font-medium">Description</span>
+                                </label>
+                                <textarea
+                                    name="description"
+                                    placeholder="What needs to be done?"
                                     required
-                                    className="w-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
-                                />
-                            </label>
+                                    className="w-full h-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
+                                ></textarea>
+                            </div>
+
+                            <div className="form-control md:ml-4 md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text text-gray-900 font-medium">Photo URL</span>
+                                </label>
+                                <label className="input-group">
+                                    <input
+                                        type="text"
+                                        name="photo"
+                                        placeholder="Photo URL"
+                                        required
+                                        className="w-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
+                                    />
+                                </label>
+                            </div>
                         </div>
-                      </div>
                         {/* Submit Button */}
                         <input type="submit" value="Add Task" className="btn bg-[#204c3f] text-white w-full py-1 border border-[#] cursor-pointer" />
                     </form>

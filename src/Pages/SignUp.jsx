@@ -131,7 +131,7 @@ const SignUp = () => {
               </div>
 
 
-              <button type='submit' className="btn btn-neutral font-bold mt-4 bg-[#1976d2] border-none">SignUp</button>
+              <button type='submit' className="btn btn-neutral font-bold mt-4 bg-[#00a7ac] border-none">SignUp</button>
             </form>
             <p className=' font-semibold text-center py-3'>
               Already Have An Account? <Link to="/auth/login" className='text-[#60A5FA]'>Login</Link>

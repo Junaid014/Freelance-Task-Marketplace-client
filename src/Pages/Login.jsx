@@ -88,7 +88,7 @@ const Login = () => {
             errorMessage && <p className='text-red-400 text-xs'>{errorMessage}</p>
           }
           
-          <button type='submit'  className="btn btn-neutral mt-4 bg-[#1976d2]  border-none">Login</button>
+          <button type='submit'  className="btn btn-neutral mt-4 bg-[#00a7ac]  border-none">Login</button>
         </form>
         <p className=' font-semibold text-center py-5'>Dont’t Have An Account ? <Link to="/auth/signUp" className='text-[#60A5FA]'>SignUp</Link></p>
       </div>
