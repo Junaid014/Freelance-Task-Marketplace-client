@@ -6,6 +6,7 @@ import Count from '../Components/Count';
 const Home = () => {
     const initialJobs=useLoaderData();
     const [jobs,setJobs]=useState(initialJobs);
+    
 
     return (
         <div>
@@ -16,11 +17,12 @@ const Home = () => {
                     <JobsCard 
                     key={job._id}
                     job={job}
+                    
                     index={index}
                     ></JobsCard>)
                 }
             </div>
-            
+
             <Count/>
           
         </div>
