@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import JobsCard from '../Components/JobsCard';
+import Count from '../Components/Count';
 
 const Home = () => {
     const initialJobs=useLoaderData();
@@ -19,6 +20,8 @@ const Home = () => {
                     ></JobsCard>)
                 }
             </div>
+            
+            <Count/>
           
         </div>
     );
