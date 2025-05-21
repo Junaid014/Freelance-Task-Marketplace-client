@@ -48,8 +48,8 @@ const UpdateTask = () => {
         })
     }
     return (
-        <div className='bg-[#f6fcfa] '>
-            <div className='w-7xl mx-auto bg-[#f6fcfa]'>
+        <div className='bg-gray-50 '>
+            <div className='w-7xl mx-auto '>
 
                 <div className="p-24">
                     <h2 className="text-3xl text-center text-[#374151] font-extrabold">Update Your Task</h2>
@@ -206,7 +206,7 @@ const UpdateTask = () => {
                             </div>
                         </div>
                         {/* Submit Button */}
-                        <input type="submit" value="Update Task" className="btn bg-[#204c3f] text-white w-full py-1 border border-[#] cursor-pointer" />
+                        <input type="submit" value="Update Task" className="mt-5 btn bg-gradient-to-r from-black to-gray-600 text-white rounded-lg font-medium shadow-md hover:from-black hover:to-gray-700 transition duration-300  w-full border border-[#] cursor-pointer" />
                     </form>
                 </div>
             </div>

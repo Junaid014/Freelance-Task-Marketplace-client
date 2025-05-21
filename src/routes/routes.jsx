@@ -19,11 +19,12 @@ export const router = createBrowserRouter([
 
     path: "/",
     Component: Root,
+     errorElement:<ErrorElement/>,
     children: [
       {
         index: true,
         path: "/",
-        errorElement:<ErrorElement/>,
+       
         loader:()=>fetch('http://localhost:3000/jobs/recent'),
         Component: Home
 

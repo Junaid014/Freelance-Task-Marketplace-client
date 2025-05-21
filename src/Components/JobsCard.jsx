@@ -53,7 +53,7 @@ const JobsCard = ({ job, index, onDelete, showDelete = false, hideDetails = true
         }`}>
 
 
-      <div className="card bg-base-200 w-96 shadow-lg shadow-gray-500 transition-transform duration-300 hover:-translate-y-1">
+      <div className="card bg-base-200 w-[370px] shadow-lg shadow-gray-500 transition-transform duration-300 hover:-translate-y-1">
         <figure>
           <img
             src={photo} className='h-[250px] object-cover rounded-2xl p-1 w-full'
