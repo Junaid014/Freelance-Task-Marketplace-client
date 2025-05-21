@@ -13,6 +13,7 @@ import JobsDetails from "../Components/JobsDetails";
 import BrowseTask from "../Pages/BrowseTask";
 import MyPostedJobs from "../Pages/MyPostedJobs";
 import PrivetRoute from "../Provider/PrivetRoute";
+import ErrorElement from "../Pages/ErrorElement";
 export const router = createBrowserRouter([
   {
 
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         path: "/",
+        errorElement:<ErrorElement/>,
         loader:()=>fetch('http://localhost:3000/jobs/recent'),
         Component: Home
 
