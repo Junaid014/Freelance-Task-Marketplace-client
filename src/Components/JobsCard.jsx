@@ -2,9 +2,11 @@
 import { Link } from 'react-router';
 import React, { useEffect, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
+import { MdDeleteOutline } from 'react-icons/md';
+import { FaPenFancy } from 'react-icons/fa';
 
-                    
-const JobsCard = ({ job, index, onDelete, showDelete = false,hideDetails=true  }) => {
+
+const JobsCard = ({ job, index, onDelete, showDelete = false, hideDetails = true }) => {
   const { deadline, title, category, description, budget, _id, photo } = job
   const [show, setShow] = useState(false);
   const ref = useRef();
@@ -51,39 +53,42 @@ const JobsCard = ({ job, index, onDelete, showDelete = false,hideDetails=true  }
         }`}>
 
 
-<div className="card bg-base-200 w-96 shadow-lg shadow-gray-500 transition-transform duration-300 hover:-translate-y-1">
-  <figure>
-    <img
-      src={photo} className='h-[250px] object-cover rounded-2xl p-1 w-full'
-            alt="jobs"/>
-  </figure>
-  <div className="card-body">
-    <h2 className="text-lg font-bold text-gray-800">{category}</h2>
-    <h2 className="text-sm font-medium text-gray-800">{title}</h2>
-    <h3 className="text-sm text-black font-semibold pb-3">Deadline:<span className='font-medium text-white bg-[#444b53] rounded-lg px-2  py-0.5'>{deadline}</span> </h3>
-    <div className='flex justify-between items-center border-t pt-3 pb-2.5 border-dashed border-gray-400'>
-      <p className='text-sm font-medium'>Starting From:</p>
-      <p className='text-sm font-bold '>${budget} /hr</p>
-    </div>
-    {
-      hideDetails && (
-        <div className="card-actions">
-            <Link to={`/jobs/${_id}`} className="btn bg-gradient-to-r from-black to-gray-600 text-white rounded-lg font-medium shadow-md hover:from-black hover:to-gray-700 transition duration-300  w-full">View Details</Link>
+      <div className="card bg-base-200 w-96 shadow-lg shadow-gray-500 transition-transform duration-300 hover:-translate-y-1">
+        <figure>
+          <img
+            src={photo} className='h-[250px] object-cover rounded-2xl p-1 w-full'
+            alt="jobs" />
+        </figure>
+        <div className="card-body">
+          <h2 className="text-lg font-bold text-gray-800">{category}</h2>
+          <h2 className="text-sm font-medium text-gray-800">{title}</h2>
+          <h3 className="text-sm text-black font-semibold pb-3">Deadline:<span className='font-medium text-white bg-[#444b53] rounded-lg px-2  py-0.5'>{deadline}</span> </h3>
+          <div className='flex justify-between items-center border-t pt-3 pb-2.5 border-dashed border-gray-400'>
+            <p className='text-sm font-medium'>Starting From:</p>
+            <p className='text-sm font-bold '>${budget} /hr</p>
           </div>
-      )
-    }
-    <div>
+          {
+            hideDetails && (
+              <div className="card-actions">
+                <Link to={`/jobs/${_id}`} className="btn bg-gradient-to-r from-black to-gray-600 text-white rounded-lg font-medium shadow-md hover:from-black hover:to-gray-700 transition duration-300  w-full">View Details</Link>
+              </div>
+            )
+          }
+          <div>
             {
               showDelete && (
-                <button
-                  onClick={handleDelete}
-                  className="btn cursor-pointer bg-orange-500">X</button>
+                <div className=" justify-between flex">
+                  <button onClick={handleDelete} className="btn bg-[#EA4744ED] hover:bg-[#EA4744] px-5"> <p className="text-xl text-white"><MdDeleteOutline /></p></button>
+
+
+                  <Link to={`/updatetask/${_id}`}><button className="btn px-5 bg-orange-200"><p><FaPenFancy /></p></button></Link>
+                </div>
               )
             }
           </div>
-  </div>
-</div>
-     
+        </div>
+      </div>
+
       {/* <div className="card bg-base-100 w-96 shadow-sm">
         <figure className="px-10 pt-10">
           <img

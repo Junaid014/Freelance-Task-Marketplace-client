@@ -16,7 +16,7 @@ const JobsDetails = () => {
           <div className=''>
             <h1 className="text-lg font-semibold">{title}</h1>
             <h3 className="text-sm text-black font-semibold">Deadline:<span className='font-medium text-gray-700'>{deadline}</span> </h3>
-            <h1 className="text-lg font-semibold">{}</h1>
+            <h1 className="text-lg font-semibold">{description}</h1>
           
 
           </div>

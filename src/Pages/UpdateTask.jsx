@@ -1,19 +1,21 @@
 import React, { use, useState } from 'react';
 import { AuthContext } from '../Provider/AuthContext';
+import { useLoaderData } from 'react-router';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Swal from 'sweetalert2';
 
-const AddTask = () => {
+const UpdateTask = () => {
+    const {  title, category, description, deadline: defaultDeadline, budget, _id, photo }
+     =useLoaderData()
     const { user } = use(AuthContext)
+     const [deadline, setDeadline] = useState(defaultDeadline ? new Date(defaultDeadline) : null);
 
-    const [deadline, setDeadline] = useState(null);
-
-    const handleAddTask = (e) => {
-        e.preventDefault();
+     const handleUpdateJobs=e=>{
+         e.preventDefault();
         const form = e.target;
 
-        const taskData = {
+        const updateJobs = {
             title: form.title.value,
             photo: form.photo.value,
             category: form.category.value,
@@ -24,42 +26,38 @@ const AddTask = () => {
             username: form.username.value,
         };
 
-        console.log(taskData);
-
-        // send jobs to database
-        fetch('http://localhost:3000/jobs', {
-            method: 'POST',
-            headers: {
+        fetch(`http://localhost:3000/jobs/${_id}` ,{
+            method:'PUT',
+            headers:{
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(taskData)
-
+            body:JSON.stringify(updateJobs)
         })
-            .then(res => res.json())
-            .then(data => {
-                
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.modifiedCount){
                 Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Job Added Successfully",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                form.reset();
-                
-            })
-    };
-
+                                    position: "center",
+                                    icon: "success",
+                                    title: "Jobs Updated Successfully",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+            }
+            console.log(data);
+        })
+    }
     return (
         <div className='bg-[#f6fcfa] '>
             <div className='w-7xl mx-auto bg-[#f6fcfa]'>
 
                 <div className="p-24">
-                    <h2 className="text-3xl text-center text-[#374151] font-extrabold">Add a Task</h2>
+                    <h2 className="text-3xl text-center text-[#374151] font-extrabold">Update Your Task</h2>
                     <p className='text-center text-[#1B1A1AB3] w-[900px] mx-auto mb-8 '>
-                        Fill in the details below to post your task. Freelancers will see this and be able to apply.
+                        Make changes to your task details below. Ensure all information is accurate so <br /> freelancers can effectively respond.
+
                     </p>
-                    <form onSubmit={handleAddTask}>
+                    <form onSubmit={handleUpdateJobs}>
                         {/* Task Title and Category */}
                         <div className="md:flex mb-8">
                             <div className="form-control md:w-1/2">
@@ -68,6 +66,7 @@ const AddTask = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    defaultValue={title}
                                     required
                                     name="title"
                                     placeholder="Task Title"
@@ -81,6 +80,7 @@ const AddTask = () => {
                                 </label>
                                 <select
                                     name="category"
+                                    defaultValue={category}
                                     required
                                     className="w-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
                                 >
@@ -111,6 +111,7 @@ const AddTask = () => {
                                     <input
                                         type="number"
                                         required
+                                        defaultValue={budget}
                                         name="budget"
                                         placeholder="Enter Budget"
                                         className="w-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
@@ -147,6 +148,7 @@ const AddTask = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    
                                     name="username"
                                     defaultValue={user?.displayName}
                                     readOnly
@@ -182,6 +184,7 @@ const AddTask = () => {
                                     name="description"
                                     placeholder="What needs to be done?"
                                     required
+                                    defaultValue={description}
                                     className="w-full h-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
                                 ></textarea>
                             </div>
@@ -196,13 +199,14 @@ const AddTask = () => {
                                         name="photo"
                                         placeholder="Photo URL"
                                         required
+                                        defaultValue={photo}
                                         className="w-full px-3 py-2 border border-gray-300 text-[#1B1A1A99] text-sm bg-white focus:outline-none focus:ring-0 focus:border-[#204c3f]"
                                     />
                                 </label>
                             </div>
                         </div>
                         {/* Submit Button */}
-                        <input type="submit" value="Add Task" className="btn bg-[#204c3f] text-white w-full py-1 border border-[#] cursor-pointer" />
+                        <input type="submit" value="Update Task" className="btn bg-[#204c3f] text-white w-full py-1 border border-[#] cursor-pointer" />
                     </form>
                 </div>
             </div>
@@ -212,4 +216,4 @@ const AddTask = () => {
     );
 };
 
-export default AddTask;
+export default UpdateTask;

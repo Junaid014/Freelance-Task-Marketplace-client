@@ -8,6 +8,7 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import AddTask from "../Pages/AddTask";
+import UpdateTask from "../Pages/UpdateTask";
 import JobsDetails from "../Components/JobsDetails";
 import BrowseTask from "../Pages/BrowseTask";
 import MyPostedJobs from "../Pages/MyPostedJobs";
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
         loader:()=>fetch('http://localhost:3000/jobs'),
         Component: BrowseTask
 
+      },
+      {
+        path:'updatetask/:id',
+        loader:({params})=>fetch(`http://localhost:3000/jobs/${params.id}`),
+        Component:UpdateTask
       },
       {
         path: "addtask",
