@@ -7,7 +7,7 @@ const BrowseTask = () => {
         const [jobs,setJobs]=useState(initialJobs);
     return (
         <div>
-              <div className='grid grid-cols-3'>
+              <div className='grid lg:grid-cols-3 grid-cols-1  lg:mx-auto mx-4   gap-5 mt-10 lg:w-9/12 '>
                 {
                     jobs.map((job,index)=>
                     <JobsCard 

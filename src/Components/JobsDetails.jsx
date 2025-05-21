@@ -6,7 +6,7 @@ const JobsDetails = () => {
      const { deadline, title, category, description, budget, _id, photo } = job
 
     return (
-         <div className=" bg-base-200 h-[300px] px-6 py-7 transition-transform duration-300 hover:-translate-y-1">
+         <div className=" bg-base-200 h-[300px] px-6 py-7 ">
         <div className="flex flex-col lg:flex-row gap-5">
           <img
            src={photo}

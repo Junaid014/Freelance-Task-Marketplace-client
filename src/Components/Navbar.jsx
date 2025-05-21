@@ -7,7 +7,7 @@ import logo from "../assets/logo.webp"
 import Loading from '../Pages/Loading';
 
 const Navbar = () => {
-  const { user, signOutUser,loading } = use(AuthContext);
+  const { user, signOutUser, loading } = use(AuthContext);
   const navigate = useNavigate();
 
   const handleSignOut = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   if (loading) {
-    return <Loading/>; // Or use a loading spinner here
+    return <Loading />; // Or use a loading spinner here
   }
 
   const links = (
@@ -32,7 +32,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? 'text-[#3B82F6] underline'
+             ? 'text-[#3B82F6] underline'
               : 'text-[#1E293B] hover:text-[#2563EB] hover:underline'
           }
         >
@@ -40,7 +40,7 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      
+
 
       <li className="mr-2 text-sm font-semibold">
         <NavLink
@@ -82,7 +82,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-full bg-gray-200  fixed top-0 left-0 right-0 shadow-sm z-50">
+    <div className="w-full   fixed top-0 left-0 right-0 shadow-sm z-50">
       <div className="navbar w-11/12 mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -107,7 +107,7 @@ const Navbar = () => {
 
           <div className="flex gap-2 justify-center items-center">
             <img className="w-10 h-10 border border-sky-100 cursor-pointer" src={logo} alt="" />
-            <a className="text-2xl text-white font-extrabold">Workly</a>
+            <a className="text-2xl text-black font-extrabold">Workly</a>
           </div>
         </div>
 

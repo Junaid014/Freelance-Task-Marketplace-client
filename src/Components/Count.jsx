@@ -9,7 +9,7 @@ const Count = () => {
     <div className='w-11/12 mx-auto'>
 
       <h2 className='text-4xl font-extrabold text-center mt-24'>Expert Help, On Demand</h2>
-      <p className='text-[#0F0F0F] text-base text-center w-[900px] mx-auto mt-4 mb-8'>
+      <p className='text-[#0F0F0F] text-base text-center lg:w-[900px] mx-auto mt-4 mb-8'>
        Get projects done faster with trusted freelancers, available on demand and ready to bring your ideas to life.
       </p>
 
