@@ -34,7 +34,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "addtask",
-        Component: AddTask
+        element: <PrivetRoute>
+          <AddTask/>
+        </PrivetRoute>
       },
       {
         path: "mycart",

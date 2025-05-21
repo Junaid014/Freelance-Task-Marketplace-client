@@ -6,7 +6,7 @@ const Count = () => {
   const [prev, View] = useInView({triggerOnce:true });
 
   return (
-    <div>
+    <div className='w-11/12 mx-auto'>
 
       <h2 className='text-4xl font-extrabold text-center mt-24'>Expert Help, On Demand</h2>
       <p className='text-[#0F0F0F] text-base text-center w-[900px] mx-auto mt-4 mb-8'>
@@ -18,7 +18,7 @@ const Count = () => {
               { img: '/team.png', count: 86205, label: 'Active Talent', duration: 12 },
           { img: '/company.png', count: 16590, label: 'Registered Companies', duration: 6 },
           { img: '/project.png', count: 68530, label: 'Project Posted Till Date', duration: 10 },
-          { img: '/success-review.png', count: 4200, label: 'Total Customer FeedBack Ratio', duration: 4 },
+          { img: '/success-review.png', count: 4200, label: 'Total Customer FeedBack', duration: 4 },
         ].map((item, idx) => 
           
           (

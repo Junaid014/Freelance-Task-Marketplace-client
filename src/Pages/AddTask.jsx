@@ -40,11 +40,11 @@ const AddTask = () => {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: "Coffee Added Successfully",
+                    title: "Job Added Successfully",
                     showConfirmButton: false,
                     timer: 1500
                 });
-                console.log('after add coffee', data);
+                
             })
     };
 

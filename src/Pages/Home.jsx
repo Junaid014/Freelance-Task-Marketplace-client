@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
 
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-3 gap-5 mt-10 w-11/12 mx-auto'>
                 {
                     jobs.map((job,index)=>
                     <JobsCard 
