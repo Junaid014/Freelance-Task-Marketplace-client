@@ -6,13 +6,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import Swal from 'sweetalert2';
 
 const UpdateTask = () => {
-    const {  title, category, description, deadline: defaultDeadline, budget, _id, photo }
-     =useLoaderData()
+    const { title, category, description, deadline: defaultDeadline, budget, _id, photo }
+        = useLoaderData()
     const { user } = use(AuthContext)
-     const [deadline, setDeadline] = useState(defaultDeadline ? new Date(defaultDeadline) : null);
+    const [deadline, setDeadline] = useState(defaultDeadline ? new Date(defaultDeadline) : null);
 
-     const handleUpdateJobs=e=>{
-         e.preventDefault();
+    const handleUpdateJobs = e => {
+        e.preventDefault();
         const form = e.target;
 
         const updateJobs = {
@@ -20,32 +20,32 @@ const UpdateTask = () => {
             photo: form.photo.value,
             category: form.category.value,
             description: form.description.value,
-            deadline: deadline?.toISOString().split("T")[0],
+            deadline: deadline?.toLocaleDateString('en-CA'),
             budget: form.budget.value,
             email: form.email.value,
             username: form.username.value,
         };
 
-        fetch(`http://localhost:3000/jobs/${_id}` ,{
-            method:'PUT',
-            headers:{
+        fetch(`http://localhost:3000/jobs/${_id}`, {
+            method: 'PUT',
+            headers: {
                 'content-type': 'application/json'
             },
-            body:JSON.stringify(updateJobs)
+            body: JSON.stringify(updateJobs)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.modifiedCount){
-                Swal.fire({
-                                    position: "center",
-                                    icon: "success",
-                                    title: "Jobs Updated Successfully",
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-            }
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Jobs Updated Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+                console.log(data);
+            })
     }
     return (
         <div className='bg-gray-50 '>
@@ -148,7 +148,7 @@ const UpdateTask = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    
+
                                     name="username"
                                     defaultValue={user?.displayName}
                                     readOnly

@@ -1,27 +1,38 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router';
+import Footer from './Footer';
 
 const JobsDetails = () => {
     const job=useLoaderData();
      const { deadline, title, category, description, budget, _id, photo } = job
 
     return (
-         <div className=" bg-base-200 h-[300px] px-6 py-7 ">
-        <div className="flex flex-col lg:flex-row gap-5">
+      <>
+      <div className=" bg-base-200 rounded-lg mb-8 px-8 py-8  lg:px-20 lg:py-20 w-11/12 mx-auto mt-8">
+        <div className="flex flex-col lg:flex-row gap-10">
           <img
            src={photo}
             alt="jobs"
-            className="w-52 h-[200px] rounded-lg shadow-2xl"
+            className="w-96 h-[250px] rounded-lg shadow-2xl"
           />
           <div className=''>
-            <h1 className="text-lg font-semibold">{title}</h1>
-            <h3 className="text-sm text-black font-semibold">Deadline:<span className='font-medium text-gray-700'>{deadline}</span> </h3>
-            <h1 className="text-lg font-semibold">{description}</h1>
+            <h2 className="text-lg font-bold text-gray-800">{category}</h2>
+          <h2 className="text-lg mb-3 mt-3 font-medium text-gray-800">{title}</h2>
+          <h3 className="text-sm text-black font-semibold pb-3">Deadline:<span className='font-medium text-white bg-[#444b53] rounded-lg px-2  py-0.5'>{deadline}</span> </h3>
+          <div className='flex justify-between items-center border-t pt-3 pb-2.5 border-dashed border-gray-400'>
+            <p className='text-sm font-medium'>Starting From:</p>
+            <p className='text-sm font-bold '>${budget} /hr</p>
+          </div>
+          <p className='text-base font-bold'>Need to do :</p>
+          <p className='lg:w-[500px] text-gray-700'>{description}</p>
           
 
           </div>
         </div>
       </div>
+      <Footer></Footer>
+      </>
+         
     );
 };
 
