@@ -3,6 +3,7 @@ import { AuthContext } from '../Provider/AuthContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Swal from 'sweetalert2';
+import Footer from '../Components/Footer';
 
 const AddTask = () => {
     const { user } = use(AuthContext)
@@ -51,10 +52,11 @@ const AddTask = () => {
     };
 
     return (
-        <div className='bg-gray-50 '>
+        <>
+        <div className='bg-gray-50 mb-14'>
             <div className='w-7xl mx-auto ]'>
 
-                <div className="p-24">
+                <div className="px-24 pt-16">
                     <h2 className="text-3xl text-center text-[#374151] font-extrabold">Add a Task</h2>
                     <p className='text-center text-[#1B1A1AB3] w-[900px] mx-auto mb-8 '>
                         Fill in the details below to post your task. Freelancers will see this and be able to apply.
@@ -209,6 +211,8 @@ const AddTask = () => {
 
 
         </div>
+        <Footer/>
+        </>
     );
 };
 

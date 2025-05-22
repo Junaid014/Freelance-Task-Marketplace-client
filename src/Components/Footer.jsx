@@ -13,7 +13,7 @@ import img2 from "../assets/playstore_2335393.png"
 const Footer = () => {
   return (
     <div>
-      <footer className="footer sm:footer-horizontal bg-black text-white p-10 mt-6">
+      <footer className="footer sm:footer-horizontal bg-black text-white p-10">
         <aside className="lg:mx-16 mx-0">
           <div className="flex items-center gap-2">
             <img className="w-14 h-12 border border-gray-700" src={logo} alt="Workly Logo" />
@@ -22,17 +22,17 @@ const Footer = () => {
           <div>
             <div className='flex items-center gap-3 '>
               <TbWorld className='text-2xl' />
-              <a className='text-lg' href="">US(International)/ <br />English</a>
+              <a className='text-lg' >US(International)/ <br />English</a>
 
             </div>
             <div className='flex items-center gap-3 mt-2'>
               <IoMdHelpCircleOutline className='text-2xl ' />
-              <a className='text-lg' href="">Help & Support</a>
+              <a className='text-lg' >Help & Support</a>
 
             </div>
             <div className='flex items-center gap-3 mt-2'>
               <IoAccessibility className='text-2xl ' />
-              <a className='text-lg' href="">Accessibility</a>
+              <a className='text-lg' >Accessibility</a>
 
             </div>
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
           {["Post a Job", "Browse Freelancers", "Pricing", "Privacy Policy", "Candidate Listing"].map((item, idx) => (
             <div key={idx} className="flex items-center gap-1 hover:text-blue-400">
            
-              <a className="link link-hover font-medium">{item}</a>
+              <a className="link link-hover font-medium ">{item}</a>
             </div>
           ))}
         </nav>
