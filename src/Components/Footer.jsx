@@ -45,7 +45,7 @@ const Footer = () => {
           {["Post a Job", "Browse Freelancers", "Pricing", "Privacy Policy", "Candidate Listing"].map((item, idx) => (
             <div key={idx} className="flex items-center gap-1 hover:text-blue-400">
            
-              <a className="link link-hover font-medium ">{item}</a>
+              <a className="link link-hover font-medium  ">{item}</a>
             </div>
           ))}
         </nav>

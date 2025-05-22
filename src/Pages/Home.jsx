@@ -24,8 +24,8 @@ const Home = () => {
         <div className=''>
             {/* <Slider/> */}
 
-            <Review  review={review}/>
-            <div className='text-center mt-8 mb-16'>
+            
+            <div className='text-center  mt-8 mb-16'>
                 <h1 className='text-4xl font-bold text-gray-800 mb-3'>Find the optimal employment opportunity <br /> that aligns with your skillset</h1>
                 <p className='text-gray-700'>Your premier online marketplace. Find quality products and services, connect with trusted sellers, <br /> and enjoy a seamless shopping experience today.</p>
             </div>
@@ -41,7 +41,7 @@ const Home = () => {
                         ></JobsCard>)
                 }
             </div>
-
+                {/* <Review  review={review}/> */}
             {/* <Count/> */}
 
             <Footer />

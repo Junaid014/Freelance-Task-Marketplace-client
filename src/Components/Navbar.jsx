@@ -6,6 +6,7 @@ import btn_logo from "../assets/user.png"
 import logo from "../assets/logo.webp"
 import Loading from '../Pages/Loading';
 
+
 const Navbar = () => {
   const { user, signOutUser, loading } = use(AuthContext);
   const navigate = useNavigate();
@@ -83,6 +84,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full   fixed top-0 left-0 right-0 shadow-sm z-50">
+   
       <div className="navbar w-11/12 mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">

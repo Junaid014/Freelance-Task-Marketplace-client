@@ -1,86 +1,73 @@
 [
   {
     "id": "r1",
-    "image": "https://i.pravatar.cc/150?img=1",
+    "image": "https://i.ibb.co/84swdtRF/arabic-man-watching-online-webinar-sitting-kitchen-with-computer-enjoying-distance-learning.jpg",
     "review": "Fantastic platform with an intuitive interface. Finding remote jobs easily!",
     "peopleName": "Alice Johnson",
     "job": "Frontend Developer"
   },
   {
     "id": "r2",
-    "image": "https://i.pravatar.cc/150?img=2",
+    "image": "https://i.ibb.co/Wv5WMymn/business-man-with-headphones-working.jpg",
     "review": "I landed a great DevOps role through this site. Highly recommend to anyone.",
     "peopleName": "Carlos Mendes",
     "job": "DevOps Engineer"
   },
   {
     "id": "r3",
-    "image": "https://i.pravatar.cc/150?img=3",
+    "image": "https://i.ibb.co/qMLprbgL/Work-from-home.jpg",
     "review": "Clean design and relevant job listings. A must-visit for modern professionals.",
     "peopleName": "Jenna Lee",
     "job": "UI/UX Designer"
   },
   {
     "id": "r4",
-    "image": "https://i.pravatar.cc/150?img=4",
+    "image": "https://i.ibb.co/4gNwkwjB/good-faces-DSj40n6be-Gk-unsplash.jpg",
     "review": "Super easy to navigate and the job descriptions are very clear and detailed.",
     "peopleName": "Tariq Ahmed",
     "job": "Full Stack Developer"
   },
   {
     "id": "r5",
-    "image": "https://i.pravatar.cc/150?img=5",
+    "image": "https://i.ibb.co/yFV1MVzV/handsome-young-latin-editor-retouching-photo-while-making-eye-contact.jpg",
     "review": "The curated job posts save me so much time. Love the focus on remote opportunities.",
-    "peopleName": "Emily Nguyen",
+    "peopleName": "Jams Nguyen",
     "job": "Backend Developer"
   },
   {
     "id": "r6",
-    "image": "https://i.pravatar.cc/150?img=6",
+    "image": "https://i.ibb.co/snF9YFw/8401.jpg",
     "review": "Excellent variety of jobs and great user experience. Found my current role here!",
     "peopleName": "Nathan Cole",
     "job": "Data Engineer"
   },
   {
     "id": "r7",
-    "image": "https://i.pravatar.cc/150?img=7",
+    "image": "https://i.ibb.co/MxWDqZMT/side-view-entrepreneur-working-laptop.jpg",
     "review": "This site gives me confidence in applying. It showcases quality companies only.",
-    "peopleName": "Priya Kaur",
+    "peopleName": "Tomas Kaur",
     "job": "Product Designer"
   },
   {
     "id": "r8",
-    "image": "https://i.pravatar.cc/150?img=8",
+    "image": "https://i.ibb.co/hxcb5HWx/smiling-young-businessman-drinking-coffee-cafe-having-video-call-writing-notes.jpg",
     "review": "Finally a job board that cares about developers. Simple, fast, and effective.",
     "peopleName": "Liam O'Brien",
     "job": "Mobile Developer"
   },
   {
     "id": "r9",
-    "image": "https://i.pravatar.cc/150?img=9",
+    "image": "https://i.ibb.co/TqrGsMwp/young-male-designer-using-graphics-tablet-while-working-with-com.jpg",
     "review": "Beautiful design and seamless experience. It’s like the Apple of job sites.",
     "peopleName": "Sara Belkacem",
     "job": "UI Designer"
   },
   {
     "id": "r10",
-    "image": "https://i.pravatar.cc/150?img=10",
+    "image": "https://i.ibb.co/k25vZnpS/resume-application-employment-form-concept.jpg",
     "review": "Impressive! I use this every week to track new opportunities.",
     "peopleName": "Mohamed El-Sayed",
     "job": "Security Engineer"
-  },
-  {
-    "id": "r11",
-    "image": "https://i.pravatar.cc/150?img=11",
-    "review": "A refreshing take on job search platforms. Very modern and helpful.",
-    "peopleName": "Lina Park",
-    "job": "Technical Writer"
-  },
-  {
-    "id": "r12",
-    "image": "https://i.pravatar.cc/150?img=12",
-    "review": "I appreciate the detailed filtering and the focus on remote roles.",
-    "peopleName": "George Watson",
-    "job": "Software Engineer"
   }
+
 ]
