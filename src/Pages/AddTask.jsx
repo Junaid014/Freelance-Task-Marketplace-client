@@ -28,7 +28,7 @@ const AddTask = () => {
         console.log(taskData);
 
         // send jobs to database
-        fetch('http://localhost:5173/jobs', {
+        fetch('https://freelancer-task-marketplace-server-five.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

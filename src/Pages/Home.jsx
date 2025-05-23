@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import JobsCard from '../Components/JobsCard';
 import Count from '../Components/Count';
 import Slider from '../Components/Slider';
 import Footer from '../Components/Footer';
 import Review from '../Components/Review';
+import { AuthContext } from '../Provider/AuthContext';
+import Loading from './Loading';
 
 const Home = () => {
     // const jobs = useLoaderData();
     
      const[review,setReview]=useState([]);
+     const {  loading } = use(AuthContext);
+        const [dataLoading, setDataLoading] = useState(true);
      const [jobs,setJobs]=useState([])
      useEffect(()=>{
-        fetch('http://localhost:5173/jobs/recent')
+         setDataLoading(true);
+        fetch('https://freelancer-task-marketplace-server-five.vercel.app/jobs/recent')
         .then(res=>res.json())
         .then(data=>{
             setJobs(data)
+            setDataLoading(false);
         })
      },[])
+     
      
      useEffect(()=>{
         fetch('/review.json')
@@ -28,6 +35,10 @@ const Home = () => {
         });
         
     },[])
+
+    if (loading || dataLoading) {
+    return <Loading />;
+  }
 
     return (
         <div className=''>

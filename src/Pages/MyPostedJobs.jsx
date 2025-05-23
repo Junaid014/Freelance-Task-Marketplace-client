@@ -6,19 +6,27 @@ import NoPostedJob from '../Components/NoPostedJob';
 import { MdDeleteOutline } from 'react-icons/md';
 import { FaPenFancy } from 'react-icons/fa';
 import { Link } from 'react-router';
+import Loading from './Loading';
 
 
 const MyPostedJobs = () => {
-  const { user } = use(AuthContext);
+  const { user ,loading } = use(AuthContext);
   const [jobs, setJobs] = useState([]);
+   const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5173/myCart/${user?.email}`)
+    setDataLoading(true);
+    fetch(`https://freelancer-task-marketplace-server-five.vercel.app/myCart/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
+        setDataLoading(false);
       });
+      
   }, [user]);
+  if (loading || dataLoading) {
+    return <Loading />;
+  }
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -31,7 +39,7 @@ const MyPostedJobs = () => {
       confirmButtonText: "Yes, delete it!"
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5173/jobs/${_id}`, {
+        fetch(`https://freelancer-task-marketplace-server-five.vercel.app/jobs/${_id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())
@@ -40,6 +48,7 @@ const MyPostedJobs = () => {
               Swal.fire("Deleted!", "Your job has been deleted.", "success");
               setJobs(prev => prev.filter(job => job._id !== _id));
             }
+            
           });
       }
     });

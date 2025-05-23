@@ -18,7 +18,7 @@ const JobsDetails = () => {
   }, [job, user]);
 
   const handleBid = () => {
-    fetch(`http://localhost:5173/jobs/${_id}/bid`, {
+    fetch(`https://freelancer-task-marketplace-server-five.vercel.app/jobs/${_id}/bid`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: user?.email }),
@@ -29,7 +29,7 @@ const JobsDetails = () => {
           setHasBid(true);
           toast.success('Bid placed successfully!');
         } else {
-          alert(data.message);
+          toast.error('already bid on this');
         }
       });
   };
@@ -61,13 +61,19 @@ const JobsDetails = () => {
             {/* Bid Button */}
             <div className="flex items-center gap-5 mt-3">
               <h2 className='text-lg font-bold'>Bid Now:</h2>
-              <button
+             <div className='relative group'>
+               <button
                 onClick={handleBid}
-                disabled={hasBid}
-                className={`border border-gray-300 ${hasBid ? ' bg-red text-2xl  cursor-not-allowed' : ' cursor-pointer bg-gray-600 text-2xl'}`}
+                className={`border border-gray-300 ${hasBid ? ' bg-red text-2xl  cursor-not-allowed' : ' cursor-pointer bg-gray-600 relative text-2xl'}`}
               >
                 {hasBid ? '❤️' : '🤍'}
               </button>
+              {hasBid && (
+    <span className="absolute -top-9 left-1/2 transform -translate-x-1/2 text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+      You have already bid on this
+    </span>
+  )}
+             </div>
             </div>
 
           </div>
