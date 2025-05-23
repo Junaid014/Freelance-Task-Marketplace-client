@@ -13,7 +13,7 @@ const MyPostedJobs = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/myCart/${user?.email}`)
+    fetch(`http://localhost:5173/myCart/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -31,7 +31,7 @@ const MyPostedJobs = () => {
       confirmButtonText: "Yes, delete it!"
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/jobs/${_id}`, {
+        fetch(`http://localhost:5173/jobs/${_id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())
@@ -63,6 +63,7 @@ const MyPostedJobs = () => {
                     <th>Category</th>
                     <th>Budget</th>
                     <th>Deadline</th>
+                    <th>Bids</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -94,6 +95,7 @@ const MyPostedJobs = () => {
 
                         <td>${job.budget}/hr</td>
                         <td>{job.deadline}</td>
+                        <td className='text-black font-semibold text-lg '>{job.bidCount || 0}</td>
                         <td>
                           <div className="flex gap-5">
                             <button

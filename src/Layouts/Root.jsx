@@ -4,12 +4,12 @@ import Navbar from '../Components/Navbar';
 
 const Root = () => {
     return (
-        <div>
-            <Navbar/>
-           <div className='pt-16'>
-             <Outlet></Outlet>
-           </div>
-        </div>
+   <div >
+  <Navbar />
+  <div className="pt-16">
+    <Outlet />
+  </div>
+</div>
     );
 };
 

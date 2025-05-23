@@ -15,7 +15,7 @@ const JobsCard = ({ job, index, onDelete, showDelete = false, hideDetails = true
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setShow(true), index * 300);
+          setTimeout(() => setShow(true), index * 200);
           observer.disconnect();
         }
       },

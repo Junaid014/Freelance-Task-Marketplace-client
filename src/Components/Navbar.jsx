@@ -11,6 +11,8 @@ const Navbar = () => {
   const { user, signOutUser, loading } = use(AuthContext);
   const navigate = useNavigate();
 
+
+
   const handleSignOut = () => {
     signOutUser()
       .then(() => {
@@ -82,6 +84,8 @@ const Navbar = () => {
     </div>
   );
 
+
+
   return (
     <div className="w-full   fixed top-0 left-0 right-0 shadow-sm z-50">
    
@@ -116,6 +120,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+
+
+      
 
         {user ? (
           <div className="navbar-end flex gap-3">

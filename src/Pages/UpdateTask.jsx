@@ -26,7 +26,7 @@ const UpdateTask = () => {
             username: form.username.value,
         };
 
-        fetch(`http://localhost:3000/jobs/${_id}`, {
+        fetch(`http://localhost:5173/jobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

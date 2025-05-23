@@ -30,7 +30,7 @@ const Footer = () => {
               <a className='text-lg' >Help & Support</a>
 
             </div>
-            <div className='flex items-center gap-3 mt-2'>
+            <div className='flex items-center  gap-3 mt-2'>
               <IoAccessibility className='text-2xl ' />
               <a className='text-lg' >Accessibility</a>
 

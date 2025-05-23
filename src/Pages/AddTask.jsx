@@ -28,7 +28,7 @@ const AddTask = () => {
         console.log(taskData);
 
         // send jobs to database
-        fetch('http://localhost:3000/jobs', {
+        fetch('http://localhost:5173/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

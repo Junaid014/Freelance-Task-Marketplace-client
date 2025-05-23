@@ -24,21 +24,20 @@ export const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-       
-        loader:()=>fetch('http://localhost:3000/jobs/recent'),
+        loader:()=>fetch('http://localhost:5173/jobs/recent'),
         Component: Home
 
       },
       {
         
         path: "/browsejobs",
-        loader:()=>fetch('http://localhost:3000/jobs'),
+        loader:()=>fetch('njobs'),
         Component: BrowseTask
 
       },
       {
         path:'updatetask/:id',
-        loader:({params})=>fetch(`http://localhost:3000/jobs/${params.id}`),
+        loader:({params})=>fetch(`http://localhost:5173/jobs/${params.id}`),
         Component:UpdateTask
       },
       {
@@ -55,7 +54,7 @@ export const router = createBrowserRouter([
       },
       {
         path:"jobs/:id",
-        loader:({params})=>fetch(`http://localhost:3000/jobs/${params.id}`),
+        loader:({params})=>fetch(`http://localhost:5173/jobs/${params.id}`),
         element:<PrivetRoute>
           <JobsDetails></JobsDetails>
         </PrivetRoute>
