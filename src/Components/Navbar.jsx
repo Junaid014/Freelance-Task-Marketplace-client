@@ -13,6 +13,10 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [theme, setTheme] = useState("light");
+  useEffect(() => {
+  document.querySelector("html").setAttribute("data-theme", theme);
+}, [theme]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -130,17 +134,49 @@ const Navbar = () => {
 
           <div className="flex gap-2 justify-center items-center">
             <img className="w-10 h-10 border border-sky-100 cursor-pointer" src={logo} alt="" />
-            <a className="text-2xl text-black font-extrabold">Workly</a>
+            <a className="text-2xl  text-black font-extrabold">Workly</a>
           </div>
         </div>
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+  
 
 
-        {user ? (
-          <div className="navbar-end flex gap-3 relative" ref={dropdownRef}>
+
+        <div className='flex navbar-end gap-5'>
+           {/*  Dark Light theme */}
+  <label className="swap swap-rotate ">
+  {/* This hidden checkbox controls the state */}
+  <input
+    type="checkbox"
+    onChange={(e) => setTheme(e.target.checked ? "synthwave" : "light")}
+    checked={theme === "synthwave"}
+  />
+
+  {/* Sun icon (light mode) */}
+  <svg
+    className="swap-off fill-current w-8 h-8"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path d="M5.64 17.66L4.22 19.08a1 1 0 0 0 1.42 1.42l1.42-1.42a1 1 0 0 0-1.42-1.42zM3 13H1a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2zm10 8a1 1 0 0 0 1 1v2a1 1 0 1 0-2 0v-2a1 1 0 0 0 1-1zm7.36-1.64a1 1 0 1 0-1.42 1.42l1.42 1.42a1 1 0 1 0 1.42-1.42l-1.42-1.42zM21 13h2a1 1 0 0 0 0-2h-2a1 1 0 1 0 0 2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-6a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1zM5.64 6.34A1 1 0 0 0 4.22 4.92L2.8 6.34a1 1 0 0 0 1.42 1.42L5.64 6.34zM18.36 6.34l1.42-1.42a1 1 0 0 0-1.42-1.42l-1.42 1.42a1 1 0 0 0 1.42 1.42z" />
+  </svg>
+
+ {/* Moon icon (dark mode) */}
+<svg
+  className="swap-on w-8 h-8 fill-black"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+>
+  <path d="M21.64 13a1 1 0 0 0-1.05-.14 8 8 0 0 1-10.45-10.5 1 1 0 0 0-1.58-1.06A10 10 0 1 0 22 14.05a1 1 0 0 0-.36-1.05z" />
+</svg>
+
+</label>
+          <div>
+            {user ? (
+          <div className=" flex gap-3 relative" ref={dropdownRef}>
             <img
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="w-12 h-11 rounded-full cursor-pointer border border-gray-300"
@@ -177,7 +213,7 @@ const Navbar = () => {
             )}
           </div>
         ) : (
-          <div className="navbar-end flex gap-3">
+          <div className="flex gap-3">
             <Link
               to="/auth/login"
               className="px-4 cursor-pointer font-medium py-2 border border-[#00a7ac] text-[#00a7ac]   duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#00a7ac] hover:to-[#00cfc2] hover:text-white
@@ -195,44 +231,9 @@ transition duration-300"
             </Link>
           </div>
         )}
-
-        {/* {user ? (
-          <div className="navbar-end flex gap-3">
-            <NavLink to="">
-              <img
-                className="w-12 h-11 rounded-full"
-                src={user?.photoURL || btn_logo}
-                alt="user"
-              />
-            </NavLink>
-
-            <button
-              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#00a7ac] to-[#00cfc3] text-white rounded-lg font-medium shadow-md hover:from-[#008f92] hover:to-[#00b5a9]
- transition duration-300"
-              onClick={handleSignOut}
-            >
-              SignOut
-            </button>
           </div>
-        ) : (
-          <div className="navbar-end flex gap-3">
-            <Link
-              to="/auth/login"
-              className="px-4 cursor-pointer font-medium py-2 border border-[#00a7ac] text-[#00a7ac]   duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#00a7ac] hover:to-[#00cfc2] hover:text-white
- rounded-md transition"
-            >
-              Login
-            </Link>
+        </div>
 
-            <Link
-              to="/auth/signUp"
-              className="px-5 py-2.5 cursor-pointer bg-gradient-to-r from-[#00a7ac] to-[#00cfc3] text-white rounded-lg font-medium shadow-md hover:from-[#008f92] hover:to-[#00b5a9]
-transition duration-300"
-            >
-              Sign Up
-            </Link>
-          </div>
-        )} */}
       </div>
     </div>
   );

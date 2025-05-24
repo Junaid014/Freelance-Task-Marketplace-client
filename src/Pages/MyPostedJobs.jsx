@@ -104,7 +104,7 @@ const MyPostedJobs = () => {
 
                         <td>${job.budget}/hr</td>
                         <td>{job.deadline}</td>
-                        <td className='text-black font-semibold text-lg '>{job.bidCount || 0}</td>
+                        <td className='text-base-content font-semibold text-lg '>{job.bidCount || 0}</td>
                         <td>
                           <div className="flex gap-5">
                             <button

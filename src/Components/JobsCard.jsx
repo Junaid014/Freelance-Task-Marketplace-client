@@ -60,9 +60,9 @@ const JobsCard = ({ job, index, onDelete, showDelete = false, hideDetails = true
             alt="jobs" />
         </figure>
         <div className="card-body">
-          <h2 className="text-lg font-bold text-gray-800">{category}</h2>
-          <h2 className="text-sm font-medium text-gray-800">{title}</h2>
-          <h3 className="text-sm text-black font-semibold pb-3">Deadline:<span className='font-medium text-white bg-[#444b53] rounded-lg px-2  py-0.5'>{deadline}</span> </h3>
+          <h2 className="text-lg font-bold text-base-content">{category}</h2>
+          <h2 className="text-sm font-medium text-base-content">{title}</h2>
+          <h3 className="text-sm text-base-content font-semibold pb-3">Deadline:<span className='font-medium text-white bg-[#444b53] rounded-lg px-2  py-0.5'>{deadline}</span> </h3>
           <div className='flex justify-between items-center border-t pt-3 pb-2.5 border-dashed border-gray-400'>
             <p className='text-sm font-medium'>Starting From:</p>
             <p className='text-sm font-bold '>${budget} /hr</p>
