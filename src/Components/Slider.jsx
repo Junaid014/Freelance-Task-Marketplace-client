@@ -10,15 +10,16 @@ const Slider = () => {
       button: "Find a Better Job"
     },
     {
-      image: "https://i.ibb.co/tDtv5Dw/Hrustall-K3-Qvd-Ukc-Qp4-unsplash.jpg",
+      image: "https://i.ibb.co/84GhVxDK/young-indian-man-with-laptop-gray-wall.jpg",
       title: "Travel in the World Of Freelance Excellence Marketplace!",
       subtitle: "Flourish in a thriving freelance ecosystem dedicated to excellence and limitless opportunities",
       button: "Find a Better Job"
     },
     {
-      image: "https://i.ibb.co/S6F3X8k/View-fantasy-tap-with-running-water-surreal-landscape-world-water-day-awareness.jpg",
+      image: "https://i.ibb.co/nqX5zZRD/80-Y29udm-Vyc2-F0a-W9u-X2-J1c2lu-ZXNz-LTA2.jpg",
       title: "Bring Ideas to Life",
-      subtitle: "Turn your vision into reality with skilled professionals."
+      subtitle: "Turn your vision into reality with skilled professionals.",
+      button: "Find a Better Job"
     }
   ];
 
@@ -35,7 +36,7 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div key={index} className="each-slide-effect">
             <div
-              className="w-full h-[750px] bg-no-repeat bg-cover bg-center flex items-center justify-start px-16"
+              className="w-full h-[750px] bg-no-repeat bg-cover  flex items-center justify-start px-16"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className=" text-black lg:pl-16 rounded-lg max-w-lg">

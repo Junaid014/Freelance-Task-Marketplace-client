@@ -19,7 +19,7 @@ const Review = ({review}) => {
     
     return (
         <>
-         <h1 className='text-4xl text-center mt-8 lg:mt-20 mb-10 font-bold text-gray-800'>Love Our Users FeedBack</h1>
+         <h1 className='text-4xl text-center mt-8 lg:mt-28 mb-10 font-bold text-gray-800'>Love Our Users FeedBack</h1>
          
       <Swiper 
       slidesPerView={2}

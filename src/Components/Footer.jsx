@@ -3,8 +3,8 @@ import { SiFacebook } from 'react-icons/si';
 import { FaXTwitter, FaPhone } from 'react-icons/fa6';
 import { IoAccessibility, IoLogoLinkedin, IoLogoYoutube } from 'react-icons/io5';
 import { FaRegSquare } from 'react-icons/fa';
-import { MdLocationOn, MdMarkEmailRead } from 'react-icons/md';
-import logo from '../assets/logo.webp'; // Update with your logo path
+
+import logo from '../assets/logo1.jpg'; 
 import { TbWorld } from 'react-icons/tb';
 import { IoMdHelpCircleOutline } from 'react-icons/io';
 import img1 from "../assets/apple_2504884.png"

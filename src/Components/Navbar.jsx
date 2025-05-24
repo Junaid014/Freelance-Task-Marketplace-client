@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthContext';
 import { toast } from 'react-toastify';
 import btn_logo from "../assets/user.png"
-import logo from "../assets/logo.webp"
+import logo from "../assets/logo1.jpg"
 import Loading from '../Pages/Loading';
 import { HiArrowLeftOnRectangle } from 'react-icons/hi2';
 

@@ -61,15 +61,7 @@ const Home = () => {
                 )
                }
                
-                {/* {
-                    jobs.map((job, index) =>
-                        <JobsCard
-                            key={job._id}
-                            job={job}
-
-                            index={index}
-                        ></JobsCard>)
-                } */}
+              
             </div>
                 <Review  review={review}/>
             <Count/>
