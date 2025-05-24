@@ -7,7 +7,7 @@ const ReviewCard = ({ rev }) => {
   return (
     <div className='p-8  bg-gray-50 '>
          
-      <div className="bg-white flex gap-4 lg:p-8 p-5 shadow-md rounded-xl hover:shadow-2xl cursor-pointer h-52 md:h-52  border border-gray-200">
+      <div className="bg-white flex flex-col lg:flex-row gap-4 lg:p-8 p-5 shadow-md rounded-xl hover:shadow-2xl cursor-pointer lg:h-52 md:h-52  border border-gray-200">
         <img className='w-[250px] rounded-lg' src={image} alt="" />
             
             <div>

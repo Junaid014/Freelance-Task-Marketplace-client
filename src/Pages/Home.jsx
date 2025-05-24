@@ -50,7 +50,7 @@ const Home = () => {
                 <p className='text-gray-700'>Your premier online marketplace. Find quality products and services, connect with trusted sellers, <br /> and enjoy a seamless shopping experience today.</p>
             </div>
 
-            <div className='grid lg:grid-cols-3 grid-cols-1  lg:mx-auto mx-4 gap-12  mt-10 lg:w-9/12'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-20 lg:mx-auto  gap-12  mt-10 lg:w-9/12'>
                
                {
                 jobs.map((job,index)=>

@@ -36,7 +36,7 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div key={index} className="each-slide-effect">
             <div
-              className="w-full h-[750px] bg-no-repeat bg-cover  flex items-center justify-start px-16"
+              className="w-full h-[750px] bg-no-repeat bg-cover bg-center lg:bg-top flex  items-center justify-start px-16"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className=" text-black lg:pl-16 rounded-lg max-w-lg">
