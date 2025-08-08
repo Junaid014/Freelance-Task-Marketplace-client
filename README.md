@@ -1,12 +1,70 @@
-# React + Vite
+# Workly - Freelancer Job Finder Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive freelancer job marketplace built with React, allowing users to find freelance gigs, post job listings, bid on opportunities, and manage work interactions in real time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo  
+🌐 https://grand-speculoos-9bee77.netlify.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Project Purpose
+
+The goal of this project is to help freelancers and clients:
+
+- Discover and post freelance jobs with ease  
+- Create and manage professional profiles  
+- Apply or bid for freelance gigs  
+- Track job activity and engagement  
+- Enjoy an intuitive and stylish user experience  
+
+---
+
+## 🔑 Key Features
+
+- 🎬 Animated landing page using Lottie React  
+- 🧭 Client-side routing with React Router  
+- 🔍 Job search with filtering and category selection  
+- 👤 Freelancer and client profile management  
+- 📊 Bid tracking per job post  
+- 🧠 Informative sections for career & freelance tips (coming soon)  
+- 🔐 Authentication-ready structure  
+- 📱 Fully responsive design with Tailwind CSS  
+- 🎨 Beautiful UI components from DaisyUI  
+- 🖼️ Icon support using React Icons  
+
+---
+
+## 📦 Packages & Tools Used
+
+| Package/Tool        | Purpose                                 |
+|---------------------|-----------------------------------------|
+| React               | Core UI Framework                       |
+| React Router DOM    | Routing & Navigation                    |
+| Tailwind CSS        | Utility-first CSS Styling               |
+| DaisyUI             | Styled Tailwind UI Components           |
+| Lottie React        | Animated Illustrations                  |
+| React Icons         | Icons Library                           |
+| Vite                | Fast development & build tool           |
+
+---
+
+## 📁 Folder Structure
+src/
+├── assets/ # Static assets (images, icons, etc.)
+├── components/ # Reusable UI components
+├── pages/ # Route-based page components
+├── Layouts/ # Shared layout components (Navbar, Footer)
+├── Provider/ # Context providers or global state
+├── routes/ # Route configurations
+├── App.jsx # Root App component
+└── main.jsx # Entry point
+
+
+## 🛠️ How to Run Locally
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/workly.git
+cd workly
